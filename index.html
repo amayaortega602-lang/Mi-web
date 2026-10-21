@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi regalo para ti ❤️</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Georgia,serif;
+  background:#fff0f5;
+  color:#77344d;
+  text-align:center;
+}
+.pagina{
+  display:none;
+  min-height:100vh;
+  padding:45px 22px;
+  animation:aparecer .6s;
+}
+.pagina.activa{display:flex;flex-direction:column;
+align-items:center;justify-content:center}
+@keyframes aparecer{
+  from{opacity:0;transform:translateY(12px)}
+  to{opacity:1;transform:translateY(0)}
+}
+h1{font-size:32px;color:#c44570}
+h2{color:#c44570}
+p{font-size:17px;line-height:1.8}
+.corazon{
+  border:0;
+  background:#d94c78;
+  color:white;
+  width:68px;height:68px;
+  border-radius:50%;
+  font-size:34px;
+  cursor:pointer;
+  box-shadow:0 5px 18px #e5a0b7;
+  margin:20px;
+}
+.corazon:active{transform:scale(.9)}
+.tarjeta{
+  background:#fffafa;
+  padding:25px;
+  border-radius:22px;
+  max-width:400px;
+  width:100%;
+  box-shadow:0 5px 25px #e9b7c9;
+}
+.foto{
+  width:100%;
+  max-width:300px;
+  height:280px;
+  object-fit:cover;
+  border-radius:18px;
+  background:#f9dce7;
+}
+.pequeno{font-size:13px;color:#a76c80}
+.opcion{
+  display:block;
+  width:100%;
+  padding:14px;
+  margin:10px 0;
+  background:#fce0e9;
+  border:1px solid #edb5c9;
+  color:#873b58;
+  border-radius:15px;
+  font-size:16px;
+  cursor:pointer;
+}
+.opcion:hover{background:#f6c5d6}
+</style>
+</head>
+
+<body>
+
+<!-- PÁGINA 1: PORTADA -->
+<section class="pagina activa" id="p1">
+  <div class="tarjeta">
+    <p>♡ UN REGALO HECHO CON AMOR ♡</p>
+    <h1>Para mi persona favorita</h1>
+    <p>Hay algo muy especial que preparé para ti...</p>
+    <p>Espero que te guste, mi amor. ❤️</p>
+    <button class="corazon" onclick="ir(2)">♥</button>
+    <p class="pequeno">Toca el corazón para descubrir tu regalo</p>
+  </div>
+</section>
+
+<!-- PÁGINA 2: BIENVENIDA -->
+<section class="pagina" id="p2">
+  <div class="tarjeta">
+    <p>ESTE REGALO ES PARA</p>
+    <h1 id="nombre">Mi amor ❤️</h1>
+    <p>De alguien que se siente muy feliz de tenerte en su vida.</p>
+    <p>Quiero regalarte un pedacito de todo lo que siento por ti.</p>
+    <button class="corazon" onclick="ir(3)">♥</button>
+    <p class="pequeno">Siguiente sorpresa →</p>
+  </div>
+</section>
+
+<!-- PÁGINA 3: FOTO -->
+<section class="pagina" id="p3">
+  <div class="tarjeta">
+    <h1>Nuestros recuerdos 📸</h1>
+    <img class="foto"
+    src="file:///storage/emulated/0/Android/data/com.teejay.trebedit/files/TrebEdit user files/quien_soy/diego.jpg"
+    alt="Nuestra foto">
+    <p>Cada recuerdo contigo tiene un lugar especial en mi corazón.</p>
+    <button class="corazon" onclick="ir(4)">♥</button>
+  </div>
+</section>
+
+<!-- PÁGINA 4: CARTA -->
+<section class="pagina" id="p4">
+  <div class="tarjeta">
+    <h1>Una carta para ti 💌</h1>
+    <p style="text-align:left">
+      Mi amor:<br><br>
+      Quiero que sepas lo mucho que significas para mí.
+      Gracias por los momentos bonitos, por las risas,
+      por tus abrazos y por cada recuerdo que hemos creado.<br><br>
+      No necesito que todo sea perfecto; quiero que sigamos
+      aprendiendo, creciendo y disfrutando de nuestra historia.
+      Me hace feliz compartir contigo tantos momentos especiales.<br><br>
+      Eres alguien muy importante para mí y espero que esta
+      pequeña sorpresa te recuerde cuánto te quiero.<br><br>
+      Con todo mi amor. ❤️
+    </p>
+    <button class="corazon" onclick="ir(5)">♥</button>
+  </div>
+</section>
+
+<!-- PÁGINA 5: CANCIÓN -->
+<section class="pagina" id="p5">
+  <div class="tarjeta">
+    <h1>Nuestra canción 🎶</h1>
+    <p>Una canción que me hace pensar en ti.</p>
+    <div style="font-size:65px">🎧💕</div>
+    <p id="cancion">Nuestra canción especial</p>
+    <a id="linkCancion" href="https://youtu.be/U_Nfp42XUjI?si=XUgBEWzO9FrjE3il"
+    target="_blank" style="color:#c44570">
+    Toca aquí para escucharla ♫
+    </a>
+    <p class="pequeno">Puedes cambiar el enlace por nuestra canción.</p>
+    <button class="corazon" onclick="ir(6)">♥</button>
+  </div>
+</section>
+
+<!-- PÁGINA 6: NUESTRA HISTORIA -->
+<section class="pagina" id="p6">
+  <div class="tarjeta">
+    <h1>Nuestra historia 🩷</h1>
+    <p>📍 El día que nos conocimos</p>
+    <p>↓</p>
+    <p>💗 Nuestro primer recuerdo especial</p>
+    <p>↓</p>
+    <p>🥰 Nuestro momento favorito</p>
+    <p>↓</p>
+    <p>✨ Todos los recuerdos que todavía nos esperan</p>
+    <button class="corazon" onclick="ir(7)">♥</button>
+  </div>
+</section>
+
+<!-- PÁGINA 7: PREGUNTA -->
+<section class="pagina" id="p7">
+  <div class="tarjeta">
+    <h1>Una preguntita para ti 🥹</h1>
+    <p>¿Cuál de estos planes te gustaría hacer conmigo?</p>
+    <button class="opcion" onclick="responder()">Una cita romántica 🌹</button>
+    <button class="opcion" onclick="responder()">Ver películas abrazados 🍿</button>
+    <button class="opcion" onclick="responder()">Viajar juntos ✈️</button>
+    <p id="respuesta"></p>
+    <button class="corazon" onclick="ir(8)">♥</button>
+  </div>
+</section>
+
+<!-- PÁGINA 8: FINAL -->
+<section class="pagina" id="p8">
+  <div class="tarjeta">
+    <div style="font-size:65px">💗</div>
+    <h1>Te quiero muchísimo</h1>
+    <p>Gracias por llegar hasta el final de este pequeño regalo.</p>
+    <p>Si pudiera regalarte una cosa, sería la oportunidad de verte
+    con mis ojos para que supieras lo especial que eres para mí.</p>
+    <h2>Con amor, para ti. ❤️</h2>
+    <button class="corazon" onclick="ir(1)">↻</button>
+    <p class="pequeno">Toca para volver a empezar</p>
+  </div>
+</section>
+
+<script>
+let paginaActual = 1;
+
+function ir(numero){
+  document.getElementById("p"+paginaActual).classList.remove("activa");
+  paginaActual = numero;
+  document.getElementById("p"+paginaActual).classList.add("activa");
+  window.scrollTo(0,0);
+}
+
+function responder(){
+  document.getElementById("respuesta").innerHTML =
+  "¡Entonces tenemos una cita pendiente! ❤️🥰";
+}
+</script>
+
+</body>
+</html<!--  -->>
+
+
